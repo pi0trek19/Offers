@@ -1,0 +1,10 @@
+G:\Projects\Offers\bin\Debug\Offers.exe.config
+G:\Projects\Offers\bin\Debug\Offers.exe
+G:\Projects\Offers\bin\Debug\Offers.pdb
+G:\Projects\Offers\obj\Debug\Offers.Form1.resources
+G:\Projects\Offers\obj\Debug\Offers.Properties.Resources.resources
+G:\Projects\Offers\obj\Debug\Offers.csproj.GenerateResource.cache
+G:\Projects\Offers\obj\Debug\Offers.csproj.CoreCompileInputs.cache
+G:\Projects\Offers\obj\Debug\Offers.exe
+G:\Projects\Offers\obj\Debug\Offers.pdb
+G:\Projects\Offers\obj\Debug\Offers.AddNewOfferDialog.resources

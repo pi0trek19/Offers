@@ -10,5 +10,6 @@ namespace Offers.Models
     {
         public List<Offer> OffersList = new List<Offer>();
         public List<Client> ClientsList = new List<Client>();
+        public List<Car> CarsList = new List<Car>();
     }
 }

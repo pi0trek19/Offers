@@ -6,12 +6,19 @@ using System.Threading.Tasks;
 
 namespace Offers.Models
 {
-    class Car
+    public class Car
     {
         public string RegNo { get; set; }
         public string Make { get; set; }
         public string Model { get; set; }
         public string Colour { get; set; }
-        
+        public Car(string reg, string make, string model, string colour)
+        {
+            this.RegNo = reg;
+            this.Make = make;
+            this.Model = model;
+            this.Colour = colour;
+
+        }
     }
 }

@@ -18,19 +18,41 @@ namespace Offers
         {
             InitializeComponent();
         }
-        
+        private void BindOffers()
+        {
+           // offerBindingSource.DataSource = document.OffersList;
+           // offerBindingSource.ResetBindings(true);
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
+            //BindOffers();
+            //dataGridView2.DataSource = document.ClientsList;
 
-            var bindingList1 = new BindingList<Offer>(document.OffersList);
-            var source1 = new BindingSource(bindingList1, null);
-            dataGridView1.DataSource = source1;
+        }
 
+        private void NewOfferbutton_Click(object sender, EventArgs e)
+        {
+            AddNewOfferDialog newOfferDialog = new AddNewOfferDialog(document.CarsList, document.OffersList, null);
+            if (newOfferDialog.ShowDialog()==DialogResult.OK)
+            {
+                AddCarToList(newOfferDialog.NewCar);
+                Offer off = new Offer(newOfferDialog.NewCar, newOfferDialog.Months, newOfferDialog.Fee, 
+                    newOfferDialog.Begin, newOfferDialog.End, newOfferDialog.Milage);
+                document.OffersList.Add(off);
+                //BindOffers();
+            }
+        }
 
-            var bindingList2 = new BindingList<Offer>(document.OffersList);
-            var source2 = new BindingSource(bindingList2, null);
-            dataGridView2.DataSource = source2;
-
+        private void AddCarToList(Car c1)
+        {
+            foreach (Car car in document.CarsList)
+            {
+                if (ReferenceEquals(car,c1))
+                {
+                    return;
+                }
+            }
+            document.CarsList.Add(c1);
         }
     }
 }
