@@ -20,12 +20,14 @@ namespace Offers
         }
         private void BindOffers()
         {
+            dataGridView1.Columns[0].ReadOnly = false;
             offerBindingSource.DataSource = document.OffersList;
             offerBindingSource.ResetBindings(true);
             dataGridView1.DataSource = offerBindingSource;
         }
         private void BindClients()
         {
+            dataGridView2.Columns[0].ReadOnly = false;
             clientBindingSource.DataSource = document.ClientsList;
             clientBindingSource.ResetBindings(true);
             dataGridView2.DataSource = clientBindingSource;
