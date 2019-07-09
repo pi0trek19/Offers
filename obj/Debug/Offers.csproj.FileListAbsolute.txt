@@ -19,3 +19,5 @@ C:\Users\Piotrek\Documents\Offers\Offers\obj\Debug\Offers.csproj.GenerateResourc
 C:\Users\Piotrek\Documents\Offers\Offers\obj\Debug\Offers.csproj.CoreCompileInputs.cache
 C:\Users\Piotrek\Documents\Offers\Offers\obj\Debug\Offers.exe
 C:\Users\Piotrek\Documents\Offers\Offers\obj\Debug\Offers.pdb
+C:\Users\Piotrek\Documents\Offers\Offers\obj\Debug\Offers.ClientDialog.resources
+C:\Users\Piotrek\Documents\Offers\Offers\obj\Debug\Offers.ClientDetailsDialog.resources

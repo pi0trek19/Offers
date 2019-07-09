@@ -17,12 +17,28 @@ namespace Offers.Models
         public string Surname { get; set; }
         [DisplayName("Nr telefonu")]
         public string Phone { get; set; }
-        public List<Offer> Offers { get; set; }
+        public List<SentOffer> SentOffers { get; set; }
         [DisplayName("Ilość ofert wysłanych")]
         public int NoOffers { get; set; }
-        public Client()
+        public Client(string mail, string name, string surname, string phone)
         {
-            NoOffers = Offers.Count;
+            this.Email = mail;
+            this.Name = name;
+            this.Surname = surname;
+            this.Phone = phone;
+            NoOffers = 0;
+            SentOffers = new List<SentOffer>();
+        }
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+            if (this.GetType() != obj.GetType()) return false;
+            Client client = (Client)obj;
+            if (this.Email == client.Email && this.Phone == client.Phone)
+            {
+                return true;
+            }
+            else return false;
         }
     }
 }

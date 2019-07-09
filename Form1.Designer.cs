@@ -33,13 +33,20 @@
             this.tabPageOffers = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ChkBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.edytujToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuńToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.NewOfferbutton = new System.Windows.Forms.Button();
             this.EditOfferbutton = new System.Windows.Forms.Button();
             this.tabPageClients = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.ChkBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Chkbox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
+            this.NewClientbutton = new System.Windows.Forms.Button();
+            this.EditClientbutton = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,16 +60,24 @@
             this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.noOffersDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clientBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.edyujToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuńToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.szczegółyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPageOffers.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.tabPageClients.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.offerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).BeginInit();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -74,7 +89,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(827, 554);
+            this.tabControl1.Size = new System.Drawing.Size(1126, 554);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPageOffers
@@ -84,7 +99,7 @@
             this.tabPageOffers.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageOffers.Name = "tabPageOffers";
             this.tabPageOffers.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageOffers.Size = new System.Drawing.Size(819, 525);
+            this.tabPageOffers.Size = new System.Drawing.Size(1118, 525);
             this.tabPageOffers.TabIndex = 0;
             this.tabPageOffers.Text = "Oferty";
             this.tabPageOffers.UseVisualStyleBackColor = true;
@@ -100,9 +115,9 @@
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 83.97129F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.02871F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(811, 517);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.10638F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.89362F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1110, 517);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // dataGridView1
@@ -120,14 +135,47 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.DataSource = this.offerBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(4, 4);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(803, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(1102, 432);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // ChkBoxColumn
+            // 
+            this.ChkBoxColumn.FillWeight = 60F;
+            this.ChkBoxColumn.HeaderText = "Wybór";
+            this.ChkBoxColumn.MinimumWidth = 6;
+            this.ChkBoxColumn.Name = "ChkBoxColumn";
+            this.ChkBoxColumn.ReadOnly = true;
+            this.ChkBoxColumn.Width = 60;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.edytujToolStripMenuItem,
+            this.usuńToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(120, 52);
+            // 
+            // edytujToolStripMenuItem
+            // 
+            this.edytujToolStripMenuItem.Name = "edytujToolStripMenuItem";
+            this.edytujToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
+            this.edytujToolStripMenuItem.Text = "Edytuj";
+            this.edytujToolStripMenuItem.Click += new System.EventHandler(this.EditOfferbutton_Click);
+            // 
+            // usuńToolStripMenuItem
+            // 
+            this.usuńToolStripMenuItem.Name = "usuńToolStripMenuItem";
+            this.usuńToolStripMenuItem.Size = new System.Drawing.Size(119, 24);
+            this.usuńToolStripMenuItem.Text = "Usuń";
+            this.usuńToolStripMenuItem.Click += new System.EventHandler(this.UsuńToolStripMenuItem_Click);
             // 
             // tableLayoutPanel3
             // 
@@ -136,13 +184,13 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.NewOfferbutton, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.EditOfferbutton, 0, 1);
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 438);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(4, 444);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(665, 75);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(665, 69);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // NewOfferbutton
@@ -150,7 +198,7 @@
             this.NewOfferbutton.Location = new System.Drawing.Point(4, 4);
             this.NewOfferbutton.Margin = new System.Windows.Forms.Padding(4);
             this.NewOfferbutton.Name = "NewOfferbutton";
-            this.NewOfferbutton.Size = new System.Drawing.Size(100, 28);
+            this.NewOfferbutton.Size = new System.Drawing.Size(131, 26);
             this.NewOfferbutton.TabIndex = 0;
             this.NewOfferbutton.Text = "Nowa Oferta";
             this.NewOfferbutton.UseVisualStyleBackColor = true;
@@ -158,11 +206,11 @@
             // 
             // EditOfferbutton
             // 
-            this.EditOfferbutton.Location = new System.Drawing.Point(3, 40);
+            this.EditOfferbutton.Location = new System.Drawing.Point(3, 37);
             this.EditOfferbutton.Name = "EditOfferbutton";
-            this.EditOfferbutton.Size = new System.Drawing.Size(101, 32);
+            this.EditOfferbutton.Size = new System.Drawing.Size(132, 29);
             this.EditOfferbutton.TabIndex = 1;
-            this.EditOfferbutton.Text = "Edytuj ofertę";
+            this.EditOfferbutton.Text = "Edytuj Ofertę";
             this.EditOfferbutton.UseVisualStyleBackColor = true;
             this.EditOfferbutton.Click += new System.EventHandler(this.EditOfferbutton_Click);
             // 
@@ -173,7 +221,7 @@
             this.tabPageClients.Margin = new System.Windows.Forms.Padding(4);
             this.tabPageClients.Name = "tabPageClients";
             this.tabPageClients.Padding = new System.Windows.Forms.Padding(4);
-            this.tabPageClients.Size = new System.Drawing.Size(819, 525);
+            this.tabPageClients.Size = new System.Drawing.Size(1118, 525);
             this.tabPageClients.TabIndex = 1;
             this.tabPageClients.Text = "Klienci";
             this.tabPageClients.UseVisualStyleBackColor = true;
@@ -183,14 +231,15 @@
             this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Controls.Add(this.dataGridView2, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel4, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(4, 4);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 69.58525F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 30.41475F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(811, 517);
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.2998F));
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.70019F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1110, 517);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // dataGridView2
@@ -201,6 +250,7 @@
             this.dataGridView2.AutoGenerateColumns = false;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Chkbox,
             this.emailDataGridViewTextBoxColumn,
             this.nameDataGridViewTextBoxColumn,
             this.surnameDataGridViewTextBoxColumn,
@@ -213,17 +263,52 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(803, 351);
+            this.dataGridView2.Size = new System.Drawing.Size(1102, 432);
             this.dataGridView2.TabIndex = 0;
             // 
-            // ChkBoxColumn
+            // Chkbox
             // 
-            this.ChkBoxColumn.FillWeight = 60F;
-            this.ChkBoxColumn.HeaderText = "Wybór";
-            this.ChkBoxColumn.MinimumWidth = 6;
-            this.ChkBoxColumn.Name = "ChkBoxColumn";
-            this.ChkBoxColumn.ReadOnly = true;
-            this.ChkBoxColumn.Width = 60;
+            this.Chkbox.HeaderText = "Wybór";
+            this.Chkbox.MinimumWidth = 6;
+            this.Chkbox.Name = "Chkbox";
+            this.Chkbox.ReadOnly = true;
+            this.Chkbox.Width = 125;
+            // 
+            // tableLayoutPanel4
+            // 
+            this.tableLayoutPanel4.ColumnCount = 2;
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Controls.Add(this.button1, 1, 0);
+            this.tableLayoutPanel4.Controls.Add(this.NewClientbutton, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.EditClientbutton, 0, 1);
+            this.tableLayoutPanel4.Location = new System.Drawing.Point(3, 443);
+            this.tableLayoutPanel4.Name = "tableLayoutPanel4";
+            this.tableLayoutPanel4.RowCount = 2;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(545, 71);
+            this.tableLayoutPanel4.TabIndex = 1;
+            // 
+            // NewClientbutton
+            // 
+            this.NewClientbutton.Location = new System.Drawing.Point(3, 3);
+            this.NewClientbutton.Name = "NewClientbutton";
+            this.NewClientbutton.Size = new System.Drawing.Size(134, 29);
+            this.NewClientbutton.TabIndex = 0;
+            this.NewClientbutton.Text = "Nowy Klient";
+            this.NewClientbutton.UseVisualStyleBackColor = true;
+            this.NewClientbutton.Click += new System.EventHandler(this.NewClientbutton_Click);
+            // 
+            // EditClientbutton
+            // 
+            this.EditClientbutton.Location = new System.Drawing.Point(3, 38);
+            this.EditClientbutton.Name = "EditClientbutton";
+            this.EditClientbutton.Size = new System.Drawing.Size(134, 30);
+            this.EditClientbutton.TabIndex = 1;
+            this.EditClientbutton.Text = "Edytuj Klienta";
+            this.EditClientbutton.UseVisualStyleBackColor = true;
+            this.EditClientbutton.Click += new System.EventHandler(this.EditClientbutton_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -295,7 +380,7 @@
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Imię";
             this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
@@ -304,7 +389,7 @@
             // surnameDataGridViewTextBoxColumn
             // 
             this.surnameDataGridViewTextBoxColumn.DataPropertyName = "Surname";
-            this.surnameDataGridViewTextBoxColumn.HeaderText = "Surname";
+            this.surnameDataGridViewTextBoxColumn.HeaderText = "Nazwisko";
             this.surnameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.surnameDataGridViewTextBoxColumn.Name = "surnameDataGridViewTextBoxColumn";
             this.surnameDataGridViewTextBoxColumn.ReadOnly = true;
@@ -313,7 +398,7 @@
             // phoneDataGridViewTextBoxColumn
             // 
             this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "Nr telefonu";
             this.phoneDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
             this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
@@ -322,21 +407,61 @@
             // noOffersDataGridViewTextBoxColumn
             // 
             this.noOffersDataGridViewTextBoxColumn.DataPropertyName = "NoOffers";
-            this.noOffersDataGridViewTextBoxColumn.HeaderText = "NoOffers";
+            this.noOffersDataGridViewTextBoxColumn.HeaderText = "Ilość wysłanych ofert";
             this.noOffersDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.noOffersDataGridViewTextBoxColumn.Name = "noOffersDataGridViewTextBoxColumn";
             this.noOffersDataGridViewTextBoxColumn.ReadOnly = true;
-            this.noOffersDataGridViewTextBoxColumn.Width = 125;
+            this.noOffersDataGridViewTextBoxColumn.Width = 200;
             // 
             // clientBindingSource
             // 
             this.clientBindingSource.DataSource = typeof(Offers.Models.Client);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(275, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 29);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.szczegółyToolStripMenuItem,
+            this.edyujToolStripMenuItem,
+            this.usuńToolStripMenuItem1});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(211, 104);
+            // 
+            // edyujToolStripMenuItem
+            // 
+            this.edyujToolStripMenuItem.Name = "edyujToolStripMenuItem";
+            this.edyujToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.edyujToolStripMenuItem.Text = "Edyuj";
+            this.edyujToolStripMenuItem.Click += new System.EventHandler(this.EditClientbutton_Click);
+            // 
+            // usuńToolStripMenuItem1
+            // 
+            this.usuńToolStripMenuItem1.Name = "usuńToolStripMenuItem1";
+            this.usuńToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.usuńToolStripMenuItem1.Text = "Usuń";
+            this.usuńToolStripMenuItem1.Click += new System.EventHandler(this.UsuńToolStripMenuItem1_Click);
+            // 
+            // szczegółyToolStripMenuItem
+            // 
+            this.szczegółyToolStripMenuItem.Name = "szczegółyToolStripMenuItem";
+            this.szczegółyToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.szczegółyToolStripMenuItem.Text = "Szczegóły";
+            this.szczegółyToolStripMenuItem.Click += new System.EventHandler(this.SzczegółyToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(827, 554);
+            this.ClientSize = new System.Drawing.Size(1126, 554);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
@@ -346,12 +471,15 @@
             this.tabPageOffers.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tabPageClients.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            this.tableLayoutPanel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.offerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientBindingSource)).EndInit();
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -367,12 +495,6 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Button NewOfferbutton;
-
-        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn noOffersDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource clientBindingSource;
         private System.Windows.Forms.BindingSource offerBindingSource;
         private System.Windows.Forms.Button EditOfferbutton;
@@ -383,6 +505,23 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem edytujToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuńToolStripMenuItem;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Chkbox;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn surnameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noOffersDataGridViewTextBoxColumn;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
+        private System.Windows.Forms.Button NewClientbutton;
+        private System.Windows.Forms.Button EditClientbutton;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem szczegółyToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem edyujToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuńToolStripMenuItem1;
     }
 }
 

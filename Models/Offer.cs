@@ -37,4 +37,20 @@ namespace Offers.Models
             CarReg = c1.RegNo;
         }
     }
+    public class SentOffer : Offer
+    {
+        public DateTime SendTimestamp { get; set; }
+
+        public SentOffer(Car c1, int mon, decimal mfee, decimal stap, decimal endp, int monmil, DateTime dateTime) : base(c1, mon, mfee, stap, endp, monmil)
+        {
+            this.RentCar = c1;
+            this.MonthlyFee = mfee;
+            this.StartPayment = stap;
+            this.EndPayment = endp;
+            this.MonthlyMilage = monmil;
+            this.SendTimestamp = dateTime;
+            this.CarReg = c1.RegNo;
+        }
+    }
+
 }

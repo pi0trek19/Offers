@@ -20,10 +20,9 @@ namespace Offers
         }
         private void BindOffers()
         {
-            dataGridView1.Columns[0].ReadOnly = false;
             offerBindingSource.DataSource = document.OffersList;
-           offerBindingSource.ResetBindings(true);
-           dataGridView1.DataSource = offerBindingSource;
+            offerBindingSource.ResetBindings(true);
+            dataGridView1.DataSource = offerBindingSource;
         }
         private void BindClients()
         {
@@ -33,10 +32,8 @@ namespace Offers
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            dataGridView1.Columns[0].ReadOnly = false;
             BindOffers();
             BindClients();
-
         }
 
         private void NewOfferbutton_Click(object sender, EventArgs e)
@@ -81,6 +78,7 @@ namespace Offers
                     offer1.StartPayment = newOfferDialog.Begin;
                     offer1.EndPayment = newOfferDialog.End;
                     offer1.CarReg = offer1.RentCar.RegNo;
+                    BindOffers();
                 }
             }
             catch (Exception)
@@ -88,6 +86,98 @@ namespace Offers
                 MessageBox.Show("Nie wybrano pozycji", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+
+        }
+
+        private void UsuńToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Offer offer1 = (Offer)dataGridView1.SelectedRows[0].DataBoundItem;
+                
+                if (MessageBox.Show("Czy chcesz usunąć pozycję", "Uwaga", MessageBoxButtons.YesNo, MessageBoxIcon.Question)==DialogResult.Yes)
+                {
+                    document.OffersList.Remove(offer1);
+                }
+ 
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nie wybrano pozycji", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void NewClientbutton_Click(object sender, EventArgs e)
+        {
+            ClientDialog dialog = new ClientDialog(null);
+            if (dialog.ShowDialog()==DialogResult.OK)
+            {
+                Client c1 = new Client(dialog.Email, dialog.ClientName, dialog.Surname, dialog.Phone);
+                if (isClientOnList(c1))
+                {
+                    MessageBox.Show("Klient o podanym adresie email/telefonie znajduje się na liście", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                document.ClientsList.Add(c1);
+                BindClients();
+            }
+        }
+        private bool isClientOnList(Client c1)
+        {
+            foreach (Client client in document.ClientsList)
+            {
+                if (c1.Equals(client))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        private void EditClientbutton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Client client = (Client)dataGridView2.SelectedRows[0].DataBoundItem;
+                ClientDialog dialog = new ClientDialog(client);
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    client.Name = dialog.ClientName;
+                    client.Surname = dialog.Surname;
+                    client.Email = dialog.Email;
+                    client.Phone = dialog.Phone;
+                    BindClients();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nie wybrano pozycji", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+
+
+        }
+
+        private void UsuńToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Client client = (Client)dataGridView2.SelectedRows[0].DataBoundItem;
+
+                if (MessageBox.Show("Czy chcesz usunąć pozycję", "Uwaga", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    document.ClientsList.Remove(client);
+                }
+
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nie wybrano pozycji", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SzczegółyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
         }
     }
