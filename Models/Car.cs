@@ -20,5 +20,17 @@ namespace Offers.Models
             this.Colour = colour;
 
         }
+        public override bool Equals(object obj)
+        {
+            if (obj == null) return false;
+            if (this.GetType() != obj.GetType()) return false;
+            Car car = (Car)obj;
+            if (this.Colour.ToLower() == car.Colour.ToLower() && this.Make.ToLower() == car.Make.ToLower()
+                && this.Model.ToLower() == car.Model.ToLower())
+            {
+                return true;
+            }
+            else return false;
+        }
     }
 }

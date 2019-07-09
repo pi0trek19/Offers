@@ -9,6 +9,8 @@ namespace Offers.Models
 {
     public class Offer
     {
+        [DisplayName("Nr rej.")]
+        public string CarReg { get; set; }
         public Car RentCar { get; set; }
         [DisplayName("Ilość miesięcy")]
         public int NoMonths { get; set; }
@@ -32,6 +34,7 @@ namespace Offers.Models
             StartPayment = stap;
             EndPayment = endp;
             MonthlyMilage = monmil;
+            CarReg = c1.RegNo;
         }
     }
 }
