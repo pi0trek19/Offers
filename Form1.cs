@@ -220,7 +220,11 @@ namespace Offers
                     }
                 }
             }
-            
+            SendOffersDialog dialog = new SendOffersDialog(clients, offers);
+            if (dialog.ShowDialog()==DialogResult.OK)
+            {
+
+            }
 
         }
     }

@@ -68,6 +68,7 @@ namespace Offers
                 layoutPanel.Controls.Add(l4, 0, 3);
                 layoutPanel.Controls.Add(l5, 0, 4);
                 layoutPanel.Controls.Add(l6, 0, 5);
+                tp.Controls.Add(layoutPanel);
                 OfferstabControl.TabPages.Add(tp);
             }
             OfferstabControl.ResumeLayout();
@@ -109,7 +110,7 @@ namespace Offers
                 layoutPanel.Controls.Add(l2, 0, 1);
                 layoutPanel.Controls.Add(l3, 0, 2);
                 layoutPanel.Controls.Add(l4, 0, 3);
-
+                tp.Controls.Add(layoutPanel);
                 ClientstabControl.TabPages.Add(tp);
             }
             ClientstabControl.ResumeLayout();
