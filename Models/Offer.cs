@@ -39,6 +39,7 @@ namespace Offers.Models
     }
     public class SentOffer : Offer
     {
+        [DisplayName("Data wysłania oferty")]
         public DateTime SendTimestamp { get; set; }
 
         public SentOffer(Car c1, int mon, decimal mfee, decimal stap, decimal endp, int monmil, DateTime dateTime) : base(c1, mon, mfee, stap, endp, monmil)

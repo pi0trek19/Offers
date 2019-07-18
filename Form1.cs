@@ -180,6 +180,47 @@ namespace Offers
 
         private void SzczegółyToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Client client = (Client)dataGridView2.SelectedRows[0].DataBoundItem;
+                ClientDetailsDialog dialog = new ClientDetailsDialog(client);
+                dialog.ShowDialog();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nie wybrano pozycji", "Błąd", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void SendOffersbutton_Click(object sender, EventArgs e)
+        {
+            List<Offer> offers = new List<Offer>();
+            List<Client> clients = new List<Client>();
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                DataGridViewCheckBoxCell cell = row.Cells[0] as DataGridViewCheckBoxCell;
+                if (cell.Value != null)
+                {
+                    if (Convert.ToBoolean(cell.Value) == true)
+                    {                        
+                        Offer o1 = (Offer)row.DataBoundItem;
+                        offers.Add(o1);
+                    }
+                }
+            }
+            foreach (DataGridViewRow row in dataGridView2.Rows)
+            {
+                DataGridViewCheckBoxCell cell = row.Cells[0] as DataGridViewCheckBoxCell;
+                if (cell.Value != null)
+                {
+                    if (Convert.ToBoolean(cell.Value) == true)
+                    {
+                        Client c1 = (Client)row.DataBoundItem;
+                        clients.Add(c1);
+                    }
+                }
+            }
+            
 
         }
     }

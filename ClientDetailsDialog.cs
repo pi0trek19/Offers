@@ -25,6 +25,7 @@ namespace Offers
             bindingSource1.DataSource = client.SentOffers;
             bindingSource1.ResetBindings(true);
             dataGridView1.DataSource = bindingSource1;
+            dataGridView1.Columns[1].Name = "Data wysłania oferty";
         }
         private void ClientDetailsDialog_Load(object sender, EventArgs e)
         {

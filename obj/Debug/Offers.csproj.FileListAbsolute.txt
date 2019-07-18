@@ -24,3 +24,4 @@ C:\Users\Piotrek\Documents\Offers\Offers\obj\Debug\Offers.ClientDetailsDialog.re
 G:\Projects\Offers\obj\Debug\Offers.csprojAssemblyReference.cache
 G:\Projects\Offers\obj\Debug\Offers.ClientDetailsDialog.resources
 G:\Projects\Offers\obj\Debug\Offers.ClientDialog.resources
+C:\Users\Piotrek\Documents\Offers\Offers\obj\Debug\Offers.SendOffersDialog.resources
